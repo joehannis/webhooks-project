@@ -17,7 +17,7 @@ const fetchGoogle = async () => {
       requestBody: {
         id: uuidv4(),
         type: 'web_hook',
-        address: process.env.GOOGLE_URL,
+        address: 'https://0581-212-221-67-202.ngrok-free.app:3000',
       },
     });
 
@@ -29,5 +29,7 @@ const fetchGoogle = async () => {
     throw error;
   }
 };
+
+fetchGoogle();
 
 module.exports = fetchGoogle;
